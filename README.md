@@ -2,7 +2,20 @@
 
 Mycroft skill to manage a todo.txt
 
+## Background
+
 During the July social, we discussed many candidates for a Mycroft skill project but felt that the most useful would be a check-list / Todo list skill as it seems more achievable in a short time.
+
+## Objectives & success criteria
+
+This project will be considered a success when the following have been achieved:
+1. The skill has sufficient language processing skills to be useful to an untrained and non-technical person
+1. That the 'database' is stored in the standaterd Todo.txt format
+1. That entries can be added, read, amended, removed (CRUD: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+
+Any others?
+
+## Implementation
 
 An existing project (The Cows Lists) was identified that has similar aims (https://github.com/CarstenAgerskov/skill-the-cows-lists) but that uses a REST interface to the 'Remember The Milk' online service (requires user account). As there is a general lean toward privacy, saving personal data on an on-line 'free' service is unlikely to be adopted by the members of our group and I am sure this also goes for others.
 
