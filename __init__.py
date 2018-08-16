@@ -14,12 +14,12 @@ __author__ = 'gerlachry'
 LOGGER = getLogger(__name__)
 
 
-class TodoistSkill(MycroftSkill):
+class TodoSkill(MycroftSkill):
     def __init__(self):
-        super().__init__(name="TodoistSkill")
+        super().__init__(name="TodoSkill")
 
     def initialize(self):
-        add_intent = IntentBuilder("TodoistIntent")\
+        add_intent = IntentBuilder("TodoIntent")\
             .require("Add")\
             .require("Task")\
             .require("Project")\
@@ -51,4 +51,4 @@ class TodoistSkill(MycroftSkill):
 
 
 def create_skill():
-    return TodoistSkill()
+    return TodoSkill()
