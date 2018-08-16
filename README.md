@@ -2,6 +2,8 @@
 
 This skill provides a to-do list using the todotxt back-end. Therefore this does not rely on any 3rd parties or external services. The todotxt file is stored locally on the Mycroft and can be syncronised with tdotxt services including Nextcloud.
 
+Project planning in the https://github.com/rugbylug/Mycroft-Todo/blob/master/BACKGROUND.md file.
+
 Initial code borrowed from https://github.com/gerlachry/skill-todoist (GPL 3 assumed) and todoist code removed.
 
 ## Requirements
