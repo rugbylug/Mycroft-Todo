@@ -2,8 +2,11 @@ from todotxt import TodoEntry
 
 class Task:
     def __init__(self, name, project=None):
-       self.entry = TodoEntry(name)
-       self.project = project
+        if isinstance(name, TodoEntry):
+            self.entry = name
+        else:
+            self.entry = TodoEntry(name)
+        self.project = project
 
-    def complete(complete=True):
-        self.entry.complete = complete
+    def complete(self, complete=True):
+        self.entry.completed = complete

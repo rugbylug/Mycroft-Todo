@@ -1,6 +1,6 @@
 from todotxt import TodoFile
 
-import project, task
+from task import Task
 
 class Project:
     def __init__(self, name, create=False):
@@ -23,17 +23,20 @@ class Project:
         self.project.save()
 
     def add(self, task):
-        self.project.add_entry(task)
+        self.project.add_entry(task.entry)
         task.project = self
 
-    def entries(self):
+    def _entries(self):
         return sorted(self.project.todo_entries, key=lambda x: x.priority or 'ZZ')
 
-    def first_entry(self, skip_completed=True):
-        entries = self.entries()
-        for entry in entries:
-            if skip_completed and entry.completed:
+    def tasks(self):
+        return map(Task, self._entries())
+
+    def first_task(self, skip_completed=True):
+        tasks = self.tasks()
+        for task in tasks:
+            if skip_completed and task.entry.completed:
                 continue
-            return entry
+            return task
 
         return None
