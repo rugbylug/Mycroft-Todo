@@ -29,10 +29,10 @@ class Project:
     def entries(self):
         return sorted(f.todo_entries, key=lambda x: x.priority or 'ZZ')
 
-    def first_entry(self, completed=True):
+    def first_entry(self, skip_completed=True):
         entries = self.entries()
         for entry in entries:
-            if completed and not entry.completed:
+            if skip_completed and entry.completed:
                 continue
             return entry
 
