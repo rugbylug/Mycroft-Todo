@@ -5,7 +5,9 @@ from adapt.intent import IntentBuilder
 
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
-import todoist
+
+from .project import Project
+from .task import Task
 
 __author__ = 'gerlachry'
 
@@ -15,9 +17,6 @@ LOGGER = getLogger(__name__)
 class TodoistSkill(MycroftSkill):
     def __init__(self):
         super().__init__(name="TodoistSkill")
-        self.token = self.config.get('token')
-        self.api = todoist.TodoistAPI(token=self.token)
-        self.api.sync()
 
     def initialize(self):
         add_intent = IntentBuilder("TodoistIntent")\

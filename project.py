@@ -4,26 +4,27 @@ import project, task
 
 class Project:
     def __init__(self, name, create=False):
-        self.project = TodoFile(name)
+        self.name = name
         self.loaded = False
         self.create = create
         self.refresh()
 
     def refresh(self):
         try:
+            self.project = TodoFile(self.name)
             self.project.load()
             self.loaded = True
             self.create = False
         except FileNotFoundError:
-            if self.create:
-                pass
-            raise
+            if not self.create:
+                raise
 
     def commit(self):
         self.project.save()
 
     def add(self, task):
         self.project.add_entry(task)
+        task.project = self
 
     def entries(self):
         return sorted(f.todo_entries, key=lambda x: x.priority or 'ZZ')
