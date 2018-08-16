@@ -27,7 +27,7 @@ class Project:
         task.project = self
 
     def entries(self):
-        return sorted(f.todo_entries, key=lambda x: x.priority or 'ZZ')
+        return sorted(self.project.todo_entries, key=lambda x: x.priority or 'ZZ')
 
     def first_entry(self, skip_completed=True):
         entries = self.entries()
