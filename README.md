@@ -2,18 +2,17 @@
 
 This skill provides a to-do list using the todotxt back-end. Therefore this does not rely on any 3rd parties or external services. The todotxt file is stored locally on the Mycroft and can be syncronised with tdotxt services including Nextcloud.
 
-Initial code borrowed from https://github.com/gerlachry/skill-todoist (GPL 3 assumed)
-
-Uses https://developer.todoist.com/?python#api-overviewapi APIs for creating tasks under a project.
+Initial code borrowed from https://github.com/gerlachry/skill-todoist (GPL 3 assumed) and todoist code removed.
 
 ## Requirements
-* install todoist-python library to mycroft-core virtualenv
-    * pip install todoist-python
+* pip install python-todotxt
+
+* install library to mycroft-core virtualenv
 * git clone to skill directory
 
 ## Language usage
 
-The following language is planned but mostly not implemented. Items implemented are marked.
+The following language is planned but mostly not implemented. Items implemented are marked as such.
 
 ### Create a list :negative_squared_cross_mark:
 - create a list called SOMELIST
