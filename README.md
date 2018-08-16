@@ -15,42 +15,42 @@ Uses https://developer.todoist.com/?python#api-overviewapi APIs for creating tas
 
 The following language is planned but mostly not implemented. Items implemented are marked.
 
-### Create a list 
+### Create a list :negative_squared_cross_mark:
 - create a list called SOMELIST
    - {{listname}} created
 
-### Set the default list (if more than one)
+### Set the default list (if more than one) :negative_squared_cross_mark:
 - set list as default
    - List {{listname}} set as default
 
-### Use a list (if more than one)
+### Use a list (if more than one) :negative_squared_cross_mark:
 - use list SOMELIST
    - Using list {{listname}}
 
-### Find / check a list
+### Find / check a list :negative_squared_cross_mark:
 - Find list SOMELIST
    - found list {{listname}}
    - cant find list {{listname}}
 
-### Delete a list
+### Delete a list :negative_squared_cross_mark:
 - Remove list SOMELIST
    - Are you sure you want to remove list {{listname}}?
 - yes
    - List {{listname}} removed
 
-### Add an item to a list
+### Add an item to a list :white_check_mark:
 - add {{item}} [to SOMELIST]
    - Item {{item}} added to {{listname}}
 
-### Enumerate list
+### Enumerate list :negative_squared_cross_mark:
 - How many items
    - There are  {{itemcount}} items on list {{listname}}
 
-### Find an item
+### Find an item :negative_squared_cross_mark:
 - Find item SOMEITEM
    - Item {{item}} found
 
-### Set item priorty
+### Set item priorty :negative_squared_cross_mark:
 - Make it priority 1
 - Make it top priority
 - Make it high priority
@@ -58,18 +58,18 @@ The following language is planned but mostly not implemented. Items implemented 
 - Make it low priority
    - Item {{item}} is now priority {{priority}}
 
-### Set item target date
+### Set item target date :negative_squared_cross_mark:
 - Set due date to SOMEDATE
    - Item {{item}} due at {{duedate}}
 
-### Set as complete
+### Set as complete :negative_squared_cross_mark:
 - mark as complete
    - Item {{item}} marked as complete
 
-### Remove item
+### Remove item :negative_squared_cross_mark:
 - Remove item SOMEITEM
    - Item {{item}} removed
 
-### Get info on the item
+### Get info on the item :negative_squared_cross_mark:
 - Tell me about it
    - Item {{itemname}} has priority {{priority}} and is due on {{duedate}}
