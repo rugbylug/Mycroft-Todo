@@ -1,6 +1,8 @@
 from todotxt import TodoFile
 
-from task import Task
+from .task import Task
+
+
 
 class Project:
     def __init__(self, name, create=False):

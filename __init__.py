@@ -1,18 +1,21 @@
 
+import sys
+
 from os.path import dirname
 
 from adapt.intent import IntentBuilder
 
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
+LOGGER = getLogger(__name__)
+LOGGER.debug('Mycroft-Todo '+sys.version)
+LOGGER.debug('Mycroft-Todo '+str(sys.path))
+
 
 from .project import Project
 from .task import Task
 
 __author__ = 'gerlachry'
-
-LOGGER = getLogger(__name__)
-
 
 class TodoSkill(MycroftSkill):
     def __init__(self):
@@ -21,8 +24,6 @@ class TodoSkill(MycroftSkill):
     def initialize(self):
         add_intent = IntentBuilder("TodoIntent")\
             .require("Add")\
-            .require("Task")\
-            .require("Project")\
             .build()
         self.register_intent(add_intent, self.handle_add)
 
